@@ -39,4 +39,5 @@ foreach (var pagamento in pagamentos)
 
 Quando o loop chegar a um objeto PagamentoBoleto, ocorrerá uma exceção, pois a classe PagamentoBoleto não implementa o método ProcessarPagamento() esperado.
 
-Portanto, o Princípio da Substituição de Liskov nos diz que as classes derivadas devem ser substituíveis por suas classes base, sem alterar a correção do programa. Isso significa que todas as classes derivadas devem implementar os métodos esperados pela classe base e não devem introduzir comportamentos inesperados ou exceções.
+Portanto, o Princípio da Substituição de Liskov nos diz que as classes derivadas devem ser substituíveis por suas classes base,
+sem alterar a correção do programa. Isso significa que todas as classes derivadas devem implementar os métodos esperados pela classe base e não devem introduzir comportamentos inesperados ou exceções.
