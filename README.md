@@ -26,18 +26,22 @@ class PagamentoBoleto : Pagamento
     // Esta classe não implementa o método ProcessarPagamento()
     // Pois pagamentos por boleto não são processados online
 }
+```
 
 No exemplo acima, a classe PagamentoBoleto viola o Princípio da Substituição de Liskov. Isso ocorre porque a classe base Pagamento espera que todas as suas classes derivadas implementem o método ProcessarPagamento(), mas a classe PagamentoBoleto não o faz.
 
 A consequência disso é que, ao utilizar essa hierarquia de classes em seu código, você pode encontrar problemas. Por exemplo, se você tiver um loop que processa pagamentos de forma genérica, como o seguinte:
-
+```csharp
 List<Pagamento> pagamentos = ObterPagamentos();
 foreach (var pagamento in pagamentos)
 {
     pagamento.ProcessarPagamento();
 }
-
+```
 Quando o loop chegar a um objeto PagamentoBoleto, ocorrerá uma exceção, pois a classe PagamentoBoleto não implementa o método ProcessarPagamento() esperado.
 
 Portanto, o Princípio da Substituição de Liskov nos diz que as classes derivadas devem ser substituíveis por suas classes base,
 sem alterar a correção do programa. Isso significa que todas as classes derivadas devem implementar os métodos esperados pela classe base e não devem introduzir comportamentos inesperados ou exceções.
+
+## Livro
+![Imagem](https://m.media-amazon.com/images/I/51YTqGVOD7L._SY425_.jpg)
